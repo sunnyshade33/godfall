@@ -4,85 +4,470 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Godfall</title>
-    <link rel="stylesheet" href="./css/godfall.css">
+    <link rel="stylesheet" href="css/godfall.css">
 </head>
 <body>
-    <div class="corpse-container">
-        <div class="god-corpse">
-            <!-- Main corpse body -->
-            <div class="flesh" style="width: 80%; height: 90%; top: 5%; left: 10%;"></div>
-            
-            <!-- Head region -->
-            <div class="flesh" style="width: 45%; height: 35%; top: 0%; left: 30%; border-radius: 40% 40% 60% 60% / 40% 40% 60% 60%;"></div>
-            
-            <!-- Eyes -->
-            <div class="eye" style="width: 13%; height: 13%; top: 12%; left: 35%;">
-                <div class="pupil"></div>
-            </div>
-            <div class="eye" style="width: 11%; height: 11%; top: 14%; left: 55%; transform: rotate(15deg);">
-                <div class="pupil"></div>
-            </div>
-            
-            <!-- Burst eye -->
-            <div class="ichor" style="width: 14%; height: 14%; top: 8%; left: 55%; animation: none; opacity: 0.9;"></div>
-            
-            <!-- Maw/mouth -->
-            <div class="maw" style="width: 30%; height: 15%; top: 25%; left: 40%; border-radius: 10% 10% 50% 50% / 10% 10% 80% 80%;">
-                <!-- Teeth -->
-                <div class="tooth" style="width: 5%; height: 20%; top: 0%; left: 10%; --rotation: -5deg;"></div>
-                <div class="tooth" style="width: 6%; height: 30%; top: 0%; left: 20%; --rotation: 5deg;"></div>
-                <div class="tooth" style="width: 5%; height: 25%; top: 0%; left: 30%; --rotation: -8deg;"></div>
-                <div class="tooth" style="width: 7%; height: 35%; top: 0%; left: 40%; --rotation: 0deg;"></div>
-                <div class="tooth" style="width: 5%; height: 20%; top: 0%; left: 50%; --rotation: 10deg;"></div>
-                <div class="tooth" style="width: 6%; height: 30%; top: 0%; left: 60%; --rotation: -5deg;"></div>
-                <div class="tooth" style="width: 4%; height: 25%; top: 0%; left: 75%; --rotation: 7deg;"></div>
-                <div class="tooth" style="width: 6%; height: 28%; top: 0%; left: 85%; --rotation: -3deg;"></div>
-            </div>
-            
-            <!-- Exposed ribcage -->
-            <div class="ribs" style="width: 5%; height: 25%; top: 42%; left: 30%; --rotation: -20deg;"></div>
-            <div class="ribs" style="width: 5%; height: 30%; top: 41%; left: 35%; --rotation: -10deg;"></div>
-            <div class="ribs" style="width: 5%; height: 35%; top: 40%; left: 40%; --rotation: 0deg;"></div>
-            <div class="ribs" style="width: 5%; height: 40%; top: 41%; left: 45%; --rotation: 0deg;"></div>
-            <div class="ribs" style="width: 5%; height: 35%; top: 40%; left: 50%; --rotation: 0deg;"></div>
-            <div class="ribs" style="width: 5%; height: 30%; top: 41%; left: 55%; --rotation: 10deg;"></div>
-            <div class="ribs" style="width: 5%; height: 25%; top: 42%; left: 60%; --rotation: 20deg;"></div>
-            
-            <!-- Pustules and boils -->
-            <div class="pustule" style="width: 5%; height: 5%; top: 10%; left: 65%;"></div>
-            <div class="pustule" style="width: 8%; height: 8%; top: 18%; left: 72%;"></div>
-            <div class="pustule" style="width: 6%; height: 6%; top: 5%; left: 20%;"></div>
-            <div class="pustule" style="width: 10%; height: 10%; top: 60%; left: 25%;"></div>
-            <div class="pustule" style="width: 7%; height: 7%; top: 55%; left: 65%;"></div>
-            <div class="pustule" style="width: 12%; height: 12%; top: 70%; left: 52%;"></div>
-            
-            <!-- Veins and corruption -->
-            <div class="vein" style="width: 40%; height: 2%; top: 30%; left: 20%; --rotation: 30deg;"></div>
-            <div class="vein" style="width: 30%; height: 1.5%; top: 35%; left: 35%; --rotation: -15deg;"></div>
-            <div class="vein" style="width: 25%; height: 2%; top: 50%; left: 42%; --rotation: 45deg;"></div>
-            <div class="vein" style="width: 35%; height: 1.8%; top: 65%; left: 30%; --rotation: -25deg;"></div>
-            <div class="vein" style="width: 40%; height: 2.2%; top: 75%; left: 45%; --rotation: 10deg;"></div>
-            <div class="vein" style="width: 20%; height: 1.5%; top: 20%; left: 60%; --rotation: 60deg;"></div>
-            
-            <!-- Leaking ichor/blood -->
-            <div class="ichor" style="width: 5%; height: 5%; top: 32%; left: 28%; animation-delay: 0s;"></div>
-            <div class="ichor" style="width: 4%; height: 4%; top: 35%; left: 35%; animation-delay: 2s;"></div>
-            <div class="ichor" style="width: 6%; height: 6%; top: 48%; left: 58%; animation-delay: 1s;"></div>
-            <div class="ichor" style="width: 5%; height: 5%; top: 60%; left: 40%; animation-delay: 4s;"></div>
-            <div class="ichor" style="width: 7%; height: 7%; top: 80%; left: 55%; animation-delay: 3s;"></div>
-            
-            <!-- Decaying limbs -->
-            <div class="flesh" style="width: 15%; height: 40%; top: 45%; left: 5%; border-radius: 40% 60% 60% 40% / 40% 30% 70% 60%; transform: rotate(-25deg);"></div>
-            <div class="flesh" style="width: 15%; height: 40%; top: 45%; left: 80%; border-radius: 60% 40% 40% 60% / 30% 40% 60% 70%; transform: rotate(25deg);"></div>
-            
-            <!-- Lower body -->
-            <div class="flesh" style="width: 40%; height: 30%; top: 70%; left: 30%; border-radius: 40% 40% 60% 60% / 40% 40% 60% 60%;"></div>
-        </div>
-        
-        <!-- Ambient effects -->
-        <div class="glow" style="width: 100%; height: 100%; top: 0; left: 0;"></div>
-        <div class="fog"></div>
-        <div class="film-grain"></div>
+    <!-- Glow source at bottom -->
+    <div class="glow-source"></div>
+    
+    <div class="container">
+        <p>It fell through layers of unbeing, a titan shedding light like dust into the absolute dark. Pressure mounted, not of water, but of absence. Where it finally rested, the stillness broke. Not with sound, but with a burgeoning presence. Something unknotted itself from the core of the ruin, a slow, cold fire consuming the memory of light. Whispers moved through the surrounding emptiness, shaping themselves around the echoes of power. A new cosmos, feeding on the old, began to stir. What woke within?</p>
     </div>
+    
+    <!-- Audio player (hidden) -->
+    <audio id="ambient-audio" loop preload="auto">
+        <!-- Using alternative audio sources that allow cross-origin usage -->
+        <source src="https://soundbible.com/mp3/Depth Charge Short-SoundBible.com-1303947570.mp3" type="audio/mpeg">
+        <source src="https://soundbible.com/mp3/Hl-Extended Thumping-SoundBible.com-829971210.mp3" type="audio/mpeg">
+        <!-- Fallback text -->
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Whale sounds audio (hidden) -->
+    <audio id="whale-audio" preload="auto">
+        <!-- Using alternative audio source that allows cross-origin usage -->
+        <source src="https://soundbible.com/mp3/Whale%20Call-SoundBible.com-275371295.mp3" type="audio/mpeg">
+        <source src="https://soundbible.com/mp3/Blowing-Whale%20Blow%20Hole-SoundBible.com-620417853.mp3" type="audio/mpeg">
+        <!-- Fallback text -->
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- 8-bit slow tones audio (hidden) -->
+    <audio id="8bit-audio" preload="auto">
+        <!-- Using more reliable 8-bit sounds with cross-origin access -->
+        <source src="https://assets.codepen.io/21542/Mario-coin-sound.mp3" type="audio/mpeg">
+        <!-- Fallback text -->
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- High pitched tone (hidden) -->
+    <audio id="high-tone-audio" preload="auto" loop>
+        <!-- Using a synth tone -->
+        <source src="https://assets.codepen.io/21542/Synth_Bell_Effect.mp3" type="audio/mpeg">
+        <!-- Fallback text -->
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Audio controls -->
+    <div class="audio-controls">
+        <button id="audio-toggle" class="audio-btn">Play Music</button>
+        <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.1" value="0.5">
+        <div id="audio-status" style="font-size: 0.7rem; margin-top: 5px; color: #b59dc3;"></div>
+    </div>
+    
+    <!-- Audio synthesizer for 8-bit sound -->
+    <script>
+        // Create audio context for custom synthesized sounds
+        let audioContext;
+        let oscillator;
+        let gainNode;
+        
+        // Initialize Web Audio API when user interacts
+        function initAudioContext() {
+            if (!audioContext) {
+                try {
+                    window.AudioContext = window.AudioContext || window.webkitAudioContext;
+                    audioContext = new AudioContext();
+                    console.log("Audio context initialized");
+                } catch (e) {
+                    console.error("Web Audio API is not supported in this browser", e);
+                }
+            }
+        }
+        
+        // Play a synthesized 8-bit like tone
+        function playSyntheticTone() {
+            if (!audioContext) return;
+            
+            try {
+                // Create oscillator for the tone
+                oscillator = audioContext.createOscillator();
+                gainNode = audioContext.createGain();
+                
+                // Connect the nodes
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                // Set up the oscillator
+                oscillator.type = Math.random() > 0.5 ? 'square' : 'sawtooth'; // 8-bit sounds use square or saw waves
+                
+                // Random frequency in higher register (slowed down sounding)
+                const baseFreq = 150 + Math.random() * 300; // 150-450 Hz
+                oscillator.frequency.setValueAtTime(baseFreq, audioContext.currentTime);
+                
+                // Glide to a slightly different frequency for effect
+                oscillator.frequency.linearRampToValueAtTime(
+                    baseFreq * (0.8 + Math.random() * 0.4), 
+                    audioContext.currentTime + 1.5
+                );
+                
+                // Volume control
+                const volumeSlider = document.getElementById('volume-slider');
+                gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+                gainNode.gain.linearRampToValueAtTime(volumeSlider.value * 0.15, audioContext.currentTime + 0.1);
+                
+                // Start tone
+                oscillator.start();
+                
+                // Fade out and stop
+                const duration = 1.5 + Math.random() * 2; // 1.5-3.5 seconds
+                gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + duration);
+                
+                // Schedule stop
+                setTimeout(() => {
+                    oscillator.stop();
+                    oscillator.disconnect();
+                    gainNode.disconnect();
+                }, duration * 1000);
+                
+                console.log("Played synthetic tone at", baseFreq, "Hz");
+                return true;
+            } catch (e) {
+                console.error("Error generating tone", e);
+                return false;
+            }
+        }
+    </script>
+    
+    <!-- Burning ember particles effect -->
+    <script>
+        // Audio controls functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const audioElement = document.getElementById('ambient-audio');
+            const whaleAudio = document.getElementById('whale-audio');
+            const eightBitAudio = document.getElementById('8bit-audio');
+            const highToneAudio = document.getElementById('high-tone-audio');
+            const audioToggle = document.getElementById('audio-toggle');
+            const volumeSlider = document.getElementById('volume-slider');
+            const audioStatus = document.getElementById('audio-status');
+            
+            let whaleTimeout = null;
+            let eightBitTimeout = null;
+            let synthToneTimeout = null;
+            let isPlaying = false;
+            
+            // Set initial volume
+            audioElement.volume = volumeSlider.value;
+            whaleAudio.volume = volumeSlider.value * 0.7;
+            eightBitAudio.volume = volumeSlider.value * 0.6; // Higher volume for 8-bit sounds
+            highToneAudio.volume = volumeSlider.value * 0.2; // Subtle background tone
+            
+            // Apply audio pitch and speed modification to simulate slowed-down effect
+            eightBitAudio.playbackRate = 0.3; // Play at very slow speed for slowed-down effect
+            highToneAudio.playbackRate = 0.5; // Slow down the high tone too
+            
+            // Log audio events for debugging
+            function logAudioStatus(message) {
+                console.log(message);
+                audioStatus.textContent = message;
+                setTimeout(() => {
+                    audioStatus.textContent = '';
+                }, 3000);
+            }
+            
+            // Force play on user interaction
+            async function startAudio() {
+                try {
+                    logAudioStatus('Starting audio...');
+                    initAudioContext(); // Initialize Web Audio API
+                    await audioElement.play();
+                    highToneAudio.play().catch(e => console.log("High tone autoplay prevented", e));
+                    isPlaying = true;
+                    audioToggle.textContent = 'Pause Music';
+                    logAudioStatus('Audio playing');
+                    
+                    // Start additional sounds after main audio confirmed playing
+                    playWhaleSound();
+                    play8BitSound();
+                    playSynthTones();
+                } catch (error) {
+                    isPlaying = false;
+                    audioToggle.textContent = 'Play Music';
+                    logAudioStatus('Failed to play audio. Click again.');
+                    console.error("Audio playback failed: ", error);
+                }
+            }
+            
+            function stopAudio() {
+                audioElement.pause();
+                whaleAudio.pause();
+                eightBitAudio.pause();
+                highToneAudio.pause();
+                
+                // Clear all timeouts
+                if (whaleTimeout) {
+                    clearTimeout(whaleTimeout);
+                    whaleTimeout = null;
+                }
+                
+                if (eightBitTimeout) {
+                    clearTimeout(eightBitTimeout);
+                    eightBitTimeout = null;
+                }
+                
+                if (synthToneTimeout) {
+                    clearTimeout(synthToneTimeout);
+                    synthToneTimeout = null;
+                }
+                
+                isPlaying = false;
+                audioToggle.textContent = 'Play Music';
+                logAudioStatus('Audio paused');
+            }
+            
+            // Play whale sound with random timing
+            function playWhaleSound() {
+                if (!isPlaying) return;
+                
+                // Clear any existing timeout
+                if (whaleTimeout) {
+                    clearTimeout(whaleTimeout);
+                }
+                
+                // Schedule whale sound with random delay (5-15 seconds)
+                const delay = Math.random() * 10000 + 5000;
+                whaleTimeout = setTimeout(() => {
+                    if (isPlaying) {
+                        try {
+                            // Reset the audio to beginning for consistent playback
+                            whaleAudio.currentTime = 0;
+                            whaleAudio.play()
+                                .then(() => {
+                                    // Schedule next whale sound after this one finishes
+                                    whaleAudio.onended = function() {
+                                        playWhaleSound();
+                                    };
+                                })
+                                .catch(error => {
+                                    console.error("Whale sound failed: ", error);
+                                    // Try again later if failed
+                                    playWhaleSound();
+                                });
+                        } catch (e) {
+                            console.error("Error playing whale sound: ", e);
+                            playWhaleSound();
+                        }
+                    }
+                }, delay);
+            }
+            
+            // Play 8-bit sound with random timing
+            function play8BitSound() {
+                if (!isPlaying) return;
+                
+                // Clear any existing timeout
+                if (eightBitTimeout) {
+                    clearTimeout(eightBitTimeout);
+                }
+                
+                // Schedule 8-bit sound with shorter delay (5-15 seconds)
+                const delay = Math.random() * 10000 + 5000;
+                eightBitTimeout = setTimeout(() => {
+                    if (isPlaying) {
+                        try {
+                            // Reset the audio to beginning
+                            eightBitAudio.currentTime = 0;
+                            
+                            // Randomize playback rate for variety (very slow)
+                            eightBitAudio.playbackRate = 0.2 + (Math.random() * 0.2); // Between 0.2 and 0.4 speed
+                            
+                            // Adjust volume to be more noticeable
+                            eightBitAudio.volume = volumeSlider.value * (0.6 + Math.random() * 0.2);
+                            
+                            // Play the 8-bit sound
+                            eightBitAudio.play()
+                                .then(() => {
+                                    console.log("8-bit sound played successfully");
+                                    // Schedule next 8-bit sound
+                                    play8BitSound();
+                                })
+                                .catch(error => {
+                                    console.error("8-bit sound failed: ", error);
+                                    // Try again later if failed
+                                    play8BitSound();
+                                });
+                        } catch (e) {
+                            console.error("Error playing 8-bit sound: ", e);
+                            play8BitSound();
+                        }
+                    }
+                }, delay);
+            }
+            
+            // Play synthesized tones occasionally
+            function playSynthTones() {
+                if (!isPlaying) return;
+                
+                // Clear any existing timeout
+                if (synthToneTimeout) {
+                    clearTimeout(synthToneTimeout);
+                }
+                
+                // Schedule synthetic tones more frequently (3-12 seconds)
+                const delay = Math.random() * 9000 + 3000;
+                synthToneTimeout = setTimeout(() => {
+                    if (isPlaying) {
+                        // Try playing the synthetic tone, fallback to the audio element if it fails
+                        if (!playSyntheticTone() && Math.random() > 0.5) {
+                            // Play the 8-bit sound as fallback
+                            eightBitAudio.currentTime = 0;
+                            eightBitAudio.volume = volumeSlider.value * 0.6;
+                            eightBitAudio.play().catch(e => console.error("Fallback 8-bit failed", e));
+                        }
+                        
+                        // Schedule next tone
+                        playSynthTones();
+                    }
+                }, delay);
+            }
+            
+            // Add click event to button
+            audioToggle.addEventListener('click', () => {
+                if (!isPlaying) {
+                    startAudio();
+                } else {
+                    stopAudio();
+                }
+            });
+            
+            // Also try to play on page click
+            document.body.addEventListener('click', function bodyClicked() {
+                if (!isPlaying) {
+                    startAudio();
+                }
+                // We keep this listener active to allow retries
+            });
+            
+            // Volume control
+            volumeSlider.addEventListener('input', () => {
+                const volume = volumeSlider.value;
+                audioElement.volume = volume;
+                whaleAudio.volume = volume * 0.7;
+                eightBitAudio.volume = volume * 0.6;
+                highToneAudio.volume = volume * 0.2;
+                
+                // Update synthesizer volume if active
+                if (gainNode) {
+                    gainNode.gain.value = volume * 0.15;
+                }
+            });
+            
+            // Try initial playback
+            setTimeout(() => {
+                if (!isPlaying) {
+                    logAudioStatus('Click anywhere to start audio');
+                }
+            }, 1000);
+        });
+        
+        function createEmbers() {
+            const body = document.querySelector('body');
+            const particleCount = 120;
+            const largeEmberCount = 40;
+            const trailCount = 30;
+            
+            // Create trails first (z-index puts them behind)
+            for (let i = 0; i < trailCount; i++) {
+                const trail = document.createElement('div');
+                trail.className = 'ember-trail';
+                
+                // Position
+                trail.style.left = `${Math.random() * 100}vw`;
+                trail.style.bottom = `-${Math.random() * 20}px`;
+                
+                // Random properties
+                trail.style.setProperty('--random', Math.random().toString());
+                trail.style.animationDelay = `${Math.random() * 8}s`;
+                trail.style.animationDuration = `${(Math.random() * 6) + 9}s`;
+                
+                body.appendChild(trail);
+            }
+            
+            // Create small particles
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random position across bottom of screen with some variation
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.bottom = `-${Math.random() * 20}px`;
+                
+                // Set random value for use in CSS calculations
+                particle.style.setProperty('--random', Math.random().toString());
+                
+                // Random animation timing
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                particle.style.animationDuration = `${(Math.random() * 6) + 9}s`;
+                
+                body.appendChild(particle);
+            }
+            
+            // Create larger, more visible embers
+            for (let i = 0; i < largeEmberCount; i++) {
+                const ember = document.createElement('div');
+                ember.className = 'ember-large';
+                
+                // Random position across bottom
+                ember.style.left = `${Math.random() * 100}vw`;
+                ember.style.bottom = `-${Math.random() * 10}px`;
+                
+                // Set random value for use in CSS calculations
+                ember.style.setProperty('--random', Math.random().toString());
+                
+                // Random animation timing
+                ember.style.animationDelay = `${Math.random() * 8}s`;
+                
+                body.appendChild(ember);
+            }
+        }
+        
+        // Create initial embers
+        window.addEventListener('load', createEmbers);
+        
+        // Continuously add new embers
+        setInterval(() => {
+            const body = document.querySelector('body');
+            
+            // Occasionally add trail
+            if (Math.random() > 0.7) {
+                const trail = document.createElement('div');
+                trail.className = 'ember-trail';
+                trail.style.left = `${Math.random() * 100}vw`;
+                trail.style.bottom = `-5px`;
+                trail.style.setProperty('--random', Math.random().toString());
+                trail.style.animationDuration = `${(Math.random() * 4) + 8}s`;
+                body.appendChild(trail);
+                
+                // Remove trail after animation
+                setTimeout(() => trail.remove(), 12000);
+            }
+            
+            // Add small ember
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = `${Math.random() * 100}vw`;
+            particle.style.bottom = `-5px`;
+            particle.style.setProperty('--random', Math.random().toString());
+            particle.style.animationDuration = `${(Math.random() * 6) + 9}s`;
+            body.appendChild(particle);
+            
+            // Occasionally add large ember
+            if (Math.random() > 0.6) {
+                const ember = document.createElement('div');
+                ember.className = 'ember-large';
+                ember.style.left = `${Math.random() * 100}vw`;
+                ember.style.bottom = `-5px`;
+                ember.style.setProperty('--random', Math.random().toString());
+                body.appendChild(ember);
+                
+                // Remove large ember after animation
+                setTimeout(() => ember.remove(), 15000);
+            }
+            
+            // Remove small particle after animation
+            setTimeout(() => particle.remove(), 15000);
+            
+        }, 150);
+    </script>
 </body>
 </html>
