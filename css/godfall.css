@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background-color: #0a0505;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.corpse-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.god-corpse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+  filter: drop-shadow(0 0 20px rgba(85, 0, 0, 0.7));
+}
+
+.flesh {
+  position: absolute;
+  background: linear-gradient(45deg, #330000, #661111);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  box-shadow: inset 0 0 40px #000000, 0 0 20px #200000;
+  animation: pulse 5s infinite alternate;
+}
+
+.eye {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px #000000;
+  overflow: hidden;
+}
+
+.pupil {
+  position: absolute;
+  background: #000000;
+  border-radius: 50%;
+  top: 45%;
+  left: 45%;
+  width: 40%;
+  height: 40%;
+  transform: translate(-50%, -50%);
+  animation: look 8s infinite;
+}
+
+.vein {
+  position: absolute;
+  background: #550011;
+  border-radius: 40%;
+  transform: rotate(var(--rotation, 0deg));
+  opacity: 0.7;
+  filter: blur(2px);
+}
+
+.ichor {
+  position: absolute;
+  background: radial-gradient(#aa0000, #440000);
+  border-radius: 50%;
+  filter: blur(4px);
+  opacity: 0.8;
+  animation: drip 7s infinite;
+}
+
+.tooth {
+  position: absolute;
+  background: linear-gradient(#dddddd, #888888);
+  border-radius: 50% 50% 0 0;
+  transform: rotate(var(--rotation, 0deg));
+}
+
+.pustule {
+  position: absolute;
+  background: radial-gradient(#ddaa66, #553311);
+  border-radius: 50%;
+  box-shadow: inset 0 0 5px #000000;
+  animation: throb 3s infinite alternate;
+}
+
+.ribs {
+  position: absolute;
+  background: linear-gradient(#ddddcc, #999988);
+  border-radius: 40% 40% 0 0;
+  transform: rotate(var(--rotation, 0deg));
+  box-shadow: 0 0 5px #000000;
+}
+
+.maw {
+  position: absolute;
+  background: linear-gradient(#220000, #000000);
+  border-radius: 20%;
+  box-shadow: inset 0 0 20px #550000;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(rgba(135, 20, 10, 0.2), transparent 70%);
+  animation: glow 8s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes look {
+  0%, 100% {
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    transform: translate(-30%, -60%);
+  }
+  50% {
+    transform: translate(-70%, -50%);
+  }
+  75% {
+    transform: translate(-50%, -30%);
+  }
+}
+
+@keyframes drip {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+}
+
+@keyframes throb {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.fog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(transparent 20%, rgba(0, 0, 0, 0.7) 100%);
+  pointer-events: none;
+  z-index: 100;
+}
+
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="a"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/></filter><rect width="100%" height="100%" filter="url(#a)"/></svg>');
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 200;
+}
